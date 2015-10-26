@@ -1,0 +1,10 @@
+# use glob syntax.
+syntax: glob
+
+*.pyc
+*.class
+cython/build
+cython/genVoronoi.c
+qtreactor/build
+*.so
+*.pyd
