@@ -53,7 +53,7 @@ public class JavaClient extends VoronoiClient{
         return "";
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         int port;
         String name = "";
         if (args.length < 1) {

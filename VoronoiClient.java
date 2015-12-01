@@ -17,7 +17,7 @@ public abstract class VoronoiClient {
         this.username = username;
     }
 
-    public boolean start() {
+    public boolean start() throws Exception{
         try {
             socket = new Socket(server, port);
         } catch(Exception ec) {
@@ -40,6 +40,7 @@ public abstract class VoronoiClient {
                 String reply = process(command);
                 if (!reply.equals("")) {
                     out.println(reply);
+                    System.out.println("Sending:" + reply);
                 }
             }
         } catch (IOException eIO) {
@@ -48,5 +49,6 @@ public abstract class VoronoiClient {
         return true;
     }
 
-    public abstract String process(String command);
+    public abstract String process(String command) throws Exception;
+
 }
